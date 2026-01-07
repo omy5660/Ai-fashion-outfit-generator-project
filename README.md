@@ -1,52 +1,86 @@
- 👗 AI-Driven Cross-Brand Fashion Fit & Outfit Recommendation System
+# 👗 AI-Driven Cross-Brand Fashion Fit & Outfit Recommendation System
 
-Personalized, cross-brand outfit and size-fit recommendations using **Generative AI** and an interactive **Streamlit dashboard**.
-
----
-
-## 🧠 Application Overview
-
-This application is a SS**Generative AI–powered fashion recommendation system** that helps users:
-
-* Get **personalized outfit suggestions**
-* Handle **size and fit variations across different brands**
-* Compare brand-specific sizing visually
-* Generate **AI-based outfit descriptions and images** based on occasion, weather, and preferences
-
-The system is designed as a **guided onboarding experience** followed by a **multi-tab dashboard**, making it suitable for real-world fashion retail use cases as well as academic evaluation.
+Personalized, cross-brand outfit and size-fit recommendations powered by **Generative AI** and delivered through an interactive **Streamlit dashboard**.
 
 ---
 
-## ⚙️ How the App Works (Flow)
+## 📌 Project Overview
 
-1. User logs in or uses demo mode
+This project presents a **Generative AI–powered fashion recommendation system** designed to solve real-world challenges in online fashion retail, especially **size inconsistency across brands**.
+
+The application guides users through a structured onboarding flow, analyzes body measurements and preferences, and delivers **personalized outfit recommendations**, **cross-brand size suggestions**, and **AI-generated outfit visuals**.
+
+It is suitable for:
+
+* Academic evaluation (MCA / AI & DS projects)
+* Portfolio showcase (Data Science / GenAI roles)
+* Fashion-tech proof-of-concept applications
+
+---
+
+## ✨ Key Features
+
+* 👤 Guided multi-step user onboarding
+* 📏 Cross-brand size & fit intelligence
+* 👗 AI-generated outfit descriptions
+* 🎨 AI-generated outfit images
+* 📊 Interactive visual analytics dashboard
+* 🧠 Occasion & weather-aware recommendations
+* 🔐 Privacy-first, session-based personalization
+
+---
+
+## 🧠 System Workflow
+
+1. User logs in or selects demo mode
 2. Step-by-step onboarding collects:
 
    * Personal details
    * Body measurements
    * Style preferences
    * Preferred brands
-   * Occasion & weather
-3. System calculates **cross-brand size recommendations**
-4. Generative AI creates:
+   * Occasion & weather context
+3. System computes **cross-brand size mapping**
+4. Generative AI produces:
 
-   * Detailed outfit text
-   * AI-generated outfit image
-5. Results are shown in a Streamlit dashboard with history and insights
+   * Outfit description (text)
+   * Outfit visualization (image)
+5. Results are displayed in a multi-tab Streamlit dashboard
 
 ---
 
-## ▶️ How to Run the Application (Streamlit)
+## 🖥️ Application Architecture
+
+```
+├── app.py                 # Main Streamlit application
+├── utils/
+│   ├── size_mapper.py     # Cross-brand size logic
+│   ├── prompt_engine.py   # LLM prompt construction
+│   └── image_gen.py       # AI image generation
+├── data/
+│   └── brand_sizes.csv    # Brand-specific size charts
+├── ss_fashionapp/         # Application screenshots
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🚀 How to Run the Application
 
 ### ✅ Prerequisites
 
-* Python **3.8 or above**
-* Internet connection (for OpenAI API)
-* OpenAI API key
+* Python **3.8+**
+* Active internet connection
+* OpenAI API Key
 
-### 📦 Required Libraries
+### 📦 Install Dependencies
 
-Install all required dependencies using:
+```bash
+pip install -r requirements.txt
+```
+
+*or*
 
 ```bash
 pip install streamlit openai pillow pandas plotly
@@ -58,48 +92,48 @@ pip install streamlit openai pillow pandas plotly
 streamlit run app.py
 ```
 
-The app will open automatically in your browser.
+The application will open automatically in your browser.
 
 ---
 
-## 🧠 Core Technologies Used
+## 🧠 Technologies Used
 
-* **Frontend:** Streamlit
-* **Language:** Python
-* **AI Models:**
-
-  * GPT-4o-mini (text-based outfit generation)
-  * GPT Image Model (outfit visualization)
-* **Visualization:** Plotly
-* **State Management:** Streamlit Session State
+| Component        | Technology              |
+| ---------------- | ----------------------- |
+| Frontend         | Streamlit               |
+| Language         | Python                  |
+| LLM (Text)       | GPT-4o-mini             |
+| LLM (Image)      | GPT Image Model         |
+| Visualization    | Plotly                  |
+| State Management | Streamlit Session State |
 
 ---
 
-## 🧩 Key Functional Modules
+## 🧩 Functional Modules
 
 ### 👤 User Onboarding
 
 * Multi-step guided form
-* Personal info, body measurements, style & brand preferences
+* Personal details, measurements, styles & brands
 
 ### 📏 Cross-Brand Size Intelligence
 
 * Brand-specific size charts
-* Automatic size mapping based on height
-* Visual size comparison using bar charts
+* Automatic size mapping
+* Visual size comparison (charts & tables)
 
 ### 👗 Generative AI Outfit Engine
 
-* Prompt-based outfit generation
+* Prompt-driven outfit generation
 * Occasion & weather-aware styling
-* AI-generated fashion images
+* AI-generated outfit images
 
 ### 📊 Interactive Dashboard Tabs
 
 * Quick Outfit Generator
 * Outfit History
 * Brand Size Table
-* Size Comparison Chart
+* Size Comparison Charts
 * User Profile Viewer
 
 ---
@@ -108,24 +142,23 @@ The app will open automatically in your browser.
 
 ### 🏠 Home & User Input Dashboard
 
-<img src="ss_fashionapp/s_fashionapp/Screenshot 2025-12-01 160625.png" width="900"/>
+<img src="ss_fashionapp/ss_fashionapp/s_fashionapp/Screenshot 2025-12-01 160625.png" width="900" />
 
 ### 👗 Outfit Recommendation Results
-<img src="ss_fashionapp/Screenshot 2025-12-01 161303.png" width="900"/>
 
+<img src="ss_fashionapp/ss_fashionapp/Screenshot 2025-12-01 161303.png" width="900" />
 
 ### 📊 Brand Comparison & Fit Insights
-<img src="ss_fashionapp/Screenshot 2025-12-01 160756.png" width="900"/>
-<img src="ss_fashionapp/Screenshot 2025-12-01 160809.png" width="900"/>
-<img src="ss_fashionapp/Screenshot 2025-12-01 160858.png" width="900"/>
-<img src="ss_fashionapp/Screenshot 2025-12-01 160921.png" width="900"/>
 
-### ⚙️ Additional Features & UI Flow
+<img src="ss_fashionapp/ss_fashionapp/Screenshot 2025-12-01 160756.png" width="900" />
+<img src="ss_fashionapp/ss_fashionapp/Screenshot 2025-12-01 160809.png" width="900" />
+<img src="ss_fashionapp/ss_fashionapp/Screenshot 2025-12-01 160858.png" width="900" />
+<img src="ss_fashionapp/ss_fashionapp/Screenshot 2025-12-01 160921.png" width="900" />
 
-<img src="ss_fashionapp/Screenshot 2025-12-01 160947.png" width="900"/>
+### ⚙️ Additional UI Flow
 
-<img src="ss_fashionapp/Screenshot 2025-12-01 161212.png" width="900"/>
-
+<img src="ss_fashionapp/ss_fashionapp/Screenshot 2025-12-01 160947.png" width="900" />
+<img src="ss_fashionapp/ss_fashionapp/Screenshot 2025-12-01 161212.png" width="900" />
 
 ---
 
@@ -133,28 +166,26 @@ The app will open automatically in your browser.
 
 * No permanent user data storage
 * Session-based personalization only
-* API key managed locally by user
-* Designed for non-sensitive fashion recommendations
+* API keys managed locally
+* Designed for non-sensitive fashion use cases
 
 ---
 
 ## 🌱 Future Enhancements
 
 * Image-based user input for outfit matching
-* Body-measurement prediction using ML
+* ML-based body measurement prediction
 * User accounts & cloud storage
 * E-commerce platform integration
-* Trend and seasonal analytics
+* Fashion trend & seasonal analytics
 
 ---
 
 ## 👨‍💻 Author
 
-**Pranjal Nilesh Belalekar**
+**OM Arun Yadav**
 MCA Student | AI & Data Science Enthusiast
 
 ---
 
-
-
-⭐ If you find this project useful, consider starring the repository!
+⭐ If you find this project useful, please consider **starring the repository** to support the work!
